@@ -1,0 +1,18 @@
+<div class="tabs">
+  <mat-tab-group>
+    <mat-tab label="Stats/Details">
+      <app-pokemon-stats
+        *ngIf="pokemon"
+        [pokemon]="pokemon"
+      ></app-pokemon-stats>
+    </mat-tab>
+    <mat-tab label="Evolutions">
+      <ng-template matTabContent>
+        <app-pokemon-evolutions
+          [pokemon]="pokemon"
+          *ngIf="pokemon"
+        ></app-pokemon-evolutions>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

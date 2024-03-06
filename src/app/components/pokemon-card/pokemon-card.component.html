@@ -1,0 +1,18 @@
+<mat-card
+  class="example-card"
+  *ngIf="image"
+  style="text-align: center; cursor: pointer"
+  [routerLink]="['pokemon', id]"
+>
+  <img
+    mat-card-image
+    [src]="image"
+    alt="Photo of a Shiba Inu"
+    style="width: 250px; height: 200px"
+  />
+  <mat-card-content>
+    <p style="margin-top: 15px">
+      {{ data.name | uppercase }}
+    </p>
+  </mat-card-content>
+</mat-card>

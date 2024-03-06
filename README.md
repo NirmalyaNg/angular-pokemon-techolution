@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Project Details:
+
+The pokemon application is a SPA that contains two routes:
+/ -> Home Page which shows a paginated grid containing the pokemon names and there images.
+There are 12 items on each page.
+/pokemon/:id -> This is the pokemon detail page. This page consists of two tabs i.e i) Stats ii) Evolutions

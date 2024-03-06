@@ -1,0 +1,28 @@
+<div class="spinner">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+</div>
+<mat-grid-list
+  [cols]="stageDetails.length"
+  gutterSize="10px"
+  *ngIf="stageDetails.length > 0 && !loading"
+>
+  <mat-grid-tile *ngFor="let pokemon of stageDetails">
+    <mat-card
+      class="example-card"
+      style="text-align: center; cursor: pointer"
+      [routerLink]="['/pokemon', pokemon.id]"
+    >
+      <img
+        mat-card-image
+        [src]="pokemon?.sprites?.other?.dream_world?.front_default"
+        [alt]="pokemon.name"
+        style="width: 250px; height: 200px"
+      />
+      <mat-card-content>
+        <p style="margin-top: 15px">
+          {{ pokemon.name | uppercase }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

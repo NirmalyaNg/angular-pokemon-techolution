@@ -1,0 +1,17 @@
+<div class="spinner">
+  <mat-spinner *ngIf="loading" color="primary"></mat-spinner>
+</div>
+<mat-grid-list cols="4" gutterSize="10px" *ngIf="!loading">
+  <mat-grid-tile *ngFor="let pokemon of pokemons">
+    <app-pokemon-card [data]="pokemon"></app-pokemon-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-paginator
+  #paginator
+  class="demo-paginator"
+  (page)="handlePageEvent($event)"
+  [length]="totalCount"
+  [pageSize]="12"
+  aria-label="Select page"
+>
+</mat-paginator>
